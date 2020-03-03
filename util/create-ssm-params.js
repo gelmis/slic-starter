@@ -2,6 +2,12 @@
 
 const AWS = require('aws-sdk')
 
+if (!AWS.config.region) {
+  AWS.config.update({
+    region: 'eu-west-1'
+  })
+}
+
 const jsonFile = process.argv[2]
 if (!jsonFile) {
   console.error(`Usage: ${process.argv[1]} JSON_FILE`)
