@@ -8,7 +8,7 @@ import modules from '../modules'
 import { ModulePipeline } from './module-pipeline'
 import StageName from './stage-name'
 import ModulePipelineRole from './module-pipeline-role'
-import PipelineDashboard from './pipeline-dashboard'
+
 import { ModuleBuildProject } from './projects/module-build-project'
 import { ModuleDeployProject } from './projects/module-deploy-project'
 
@@ -72,7 +72,5 @@ export class CicdStack extends cdk.Stack {
         }
       }
     })
-
-    new PipelineDashboard(this, 'pipeline-dashboard')
   }
 }
